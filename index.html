@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     crossorigin="anonymous">
 
-    <!-- ============ css link =============== -->
+  <!-- ============ css link =============== -->
   <link rel="stylesheet" href="style.css">
 
   <!-- =========== Auto Write Script ============== -->
@@ -27,11 +27,11 @@
     <div class="max-width">
       <div class="logo"><a href="#">Annu<span>Placement</span></a></div>
       <ul class="menu">
-        <li><a href="#">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#Services">Services</a></li>
+        <li><a href="#">Education</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#">Feedback</a></li>
       </ul>
       <img src="res/menu.png" class="menu-btn">
     </div>
@@ -46,8 +46,11 @@
         <div class="text-3">Our services <span class="auto-input"></span></div>
       </div>
       <div class="btn">
-        <a href="#contact">Contact</a>
+        <a href="#contact">Contact Now</a>
       </div>
+    </div>
+    <div class="top-move">
+      <a href="#home"><img src="res/up-icon.png" width="35px" class="bursh"></a> 
     </div>
   </section>
   <!--================== Services section ================-->
@@ -87,6 +90,17 @@
               and functions for employee management and reporting.</p>
           </div>
         </div>
+
+        <div class="card">
+          <div class="box">
+            <img src="res/edu.png" width="35px" class="bursh">
+            <div class="text">Education Department</div>
+            <p>Education develops critical thinking. This is vital in teaching a person how to use logic when making decisions and interacting with people (e.g., boosting creativity, enhancing time management). Education helps an individual meet basic job qualifications and makes them more likely to secure better jobs.</p>
+            <div class="btn" id="edu-btn">
+              <a href="couses.html">Visit Site</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -102,14 +116,10 @@
         </div>
         <div class="right-side">
           <div class="text">I'm Anita Pandit, Founder of <span>Annu Placement</span></div>
-          <p>Also known for Placement Services (Candidate), Placement Services For Part Time Job (Candidate), Placement
-            Services (For Employers), Placement Services For Teachers (Candidate), Placement Services For Call Centre
-            (Candidate), Placement Services For Back Office (Candidate), Placement Services For Computer Operators
-            (Candidate), Placement Services For Accounts (Candidate), Realstate and much more. Find Address, Contact
-            Number,
-            Reviews & Ratings, Photos, Maps of Annu Placement Services, Patn
+          <p><span>Goal: </span>One of the main objectives of Annu Placement is to find suitable opportunities for job applicants that deposit their curriculum vitaes, résumés and other supporting documents with them. Annu Placement typically develop vast databases of candidates when they invite applications for vacancies.
           </p>
           <a href="#contact">Visit Office</a>
+          <a href="couses.html" id="oth-ser">Others Services</a>
         </div>
       </div>
     </div>
@@ -118,6 +128,7 @@
   <section class="contact" id="contact">
     <div class="max-width">
       <h2 class="heading" id="con-head">Contact us</h2>
+
       <div class="contact-wrap">
         <div class="contact-in">
           <h1>Contact Info</h1>
@@ -136,12 +147,15 @@
         </div>
         <div class="contact-in">
           <h1>Send a Message</h1>
-          <form">
-            <input type="text" placeholder="Full Name" class="contact-in-input" id="name">
-            <input type="text" placeholder="Email" class="contact-in-input" id="email">
-            <input type="number" placeholder="Mobile" class="contact-in-input" id="mobile">
-            <textarea placeholder="Message" class="contact-in-textarea" id="massage"></textarea>
-            <input type="submit" value="SUBMIT" class="contact-in-btn" id="btn">
+
+          <form>
+
+            <input type="text" placeholder="Enter Your Full Name" class="contact-in-input" name="name" required>
+            <input type="text" placeholder="Enter Your Email Id" class="contact-in-input" name="email" required>
+            <input type="text" placeholder="Enter Your Mobile" class="contact-in-input" name="mobile" required>
+            <textarea placeholder="Enter Your Message" class="contact-in-textarea" name="massage" required></textarea>
+
+            <button class="contact-in-btn" id="btn" type="submit">Send Massage</button>
           </form>
         </div>
         <div class="contact-in">
@@ -155,11 +169,11 @@
   </section>
 
   <!--================== script section ================-->
-  
+
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
     var typed = new Typed(".auto-input", {
-      strings: ["Job Placement", "Staff Training", "HR Solution"],
+      strings: ["Job Placement", "Staff Training", "HR Solution", "Education"],
       typeSpeed: 190,
       backspeed: 190,
       loop: true
@@ -170,7 +184,7 @@
   <script>
     $(document).ready(function () {
       $(window).scroll(function () {
-        if (this.scrollY > 20) {
+        if (this.scrollY > 15) {
           $('.navbar').addClass("sticky");
         } else {
           $('.navbar').removeClass("sticky");
@@ -183,7 +197,5 @@
     })
   </script>
 
-
 </body>
-
 </html>
